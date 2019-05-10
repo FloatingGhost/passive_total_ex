@@ -5,7 +5,7 @@ defmodule PassiveTotal.Client do
 
   @adapter {
     Tesla.Adapter.Hackney,
-    [pool: :virustotal]
+    [pool: :passive_total]
   }
 
   @doc """
