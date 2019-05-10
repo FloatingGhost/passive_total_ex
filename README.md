@@ -1,6 +1,24 @@
 # PassiveTotal
 
-**TODO: Add description**
+A binding to RiskIQ's PassiveTotal API
+
+Basic usage:
+```elixir
+iex> client = PassiveTotal.Client.new("my@email.com", "my_apikey")
+iex> PassiveTotal.PassiveDNS.get(client, "yuruyuri.com")
+{:ok,
+  %{
+    "firstSeen" => "2011-03-05 20:15:11",
+    "lastSeen" => "2019-05-10 15:44:30",
+    "pager" => nil,
+    "queryType" => "domain",
+    "queryValue" => "yuruyuri.com",
+    "results" => [
+        ...
+    ]
+  }
+}
+```
 
 ## Installation
 
